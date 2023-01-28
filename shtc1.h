@@ -43,10 +43,8 @@ extern "C" {
 /* API result codes */
 #define SHTC1_OK                  INT8_C(0)
 #define SHTC1_E_NULL_PTR          INT8_C(-1)
-#define SHTC1_E_DEV_NOT_FOUND     INT8_C(-2)
-#define SHTC1_E_INVALID_LEN       INT8_C(-3)
-#define SHTC1_E_COMM_FAIL         INT8_C(-4)
-#define SHTC1_E_SLEEP_MODE_FAIL   INT8_C(-5)
+#define SHTC1_E_NO_DEV            INT8_C(-2)
+#define SHTC1_E_COMM_FAIL         INT8_C(-3)
 
 /* Chip ID */
 #define SHTC1_ID_ANY(ID)          (((ID) & 0x003F) == 0x0007)

@@ -79,7 +79,7 @@ int8_t shtc1_init(struct shtc1_dev *dev)
 
         if (!try_count)
         {
-            rslt = SHTC1_E_DEV_NOT_FOUND;
+            rslt = SHTC1_E_NO_DEV;
         }
     }
 

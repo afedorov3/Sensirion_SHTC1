@@ -1,7 +1,8 @@
 /*****************************************************************
  *          Bare-bones Sensirion SHTC1 / SHTC3 driver            *
  *        Loosely based on Bosch Sensortec BME280 driver         *
- * AF 2023                                                       *
+ *                                                               *
+ * Revision 20230128                                             *
  *****************************************************************/
 
 #include "shtc1.h"

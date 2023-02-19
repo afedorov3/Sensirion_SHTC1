@@ -172,8 +172,8 @@ int8_t shtc1_get_trh(struct shtc1_dev *dev, int16_t *t, uint16_t *rh)
             return SHTC1_E_COMM_FAIL;
 
         /* fixed point data rounded to second decimal place */
-        *t  = (((uint32_t)buf[0] << 8 | buf[1]) * 17500 + 32768) / 65536 - 4500;
-        *rh = (((uint32_t)buf[3] << 8 | buf[4]) * 10000 + 32768) / 65536;
+        *t  = ((((int32_t)buf[0] << 8 | buf[1]) * 4375 + 8192) >> 14) - 4500;
+        *rh = (((int32_t)buf[3] << 8 | buf[4]) * 625 + 2048) >> 12;
     }
 
     return rslt;
